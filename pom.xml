@@ -9,7 +9,7 @@
 
 	<name>Bootstrap Default Theme</name>
 	<artifactId>webjar-bootstrap</artifactId>
-	<version>3.3.7</version>
+	<version>3.3.7-1-SNAPSHOT</version>
 	<description>Default bootstrap theme.</description>
 	
 	<properties>
@@ -49,8 +49,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
-  <scm>
-    <tag>3.3.7</tag>
-  </scm>
 </project>
