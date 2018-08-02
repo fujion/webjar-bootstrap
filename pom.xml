@@ -9,7 +9,7 @@
 
 	<name>Bootstrap Default Theme</name>
 	<artifactId>webjar-bootstrap</artifactId>
-	<version>3.3.7-SNAPSHOT</version>
+	<version>3.3.7</version>
 	<description>Default bootstrap theme.</description>
 	
 	<properties>
@@ -37,10 +37,10 @@
 						<id>precompile</id>
 						<configuration>
 							<target>
-								<get src="${src.url}" dest="${src.zipdir}/src.zip"/>
+								<get src="${src.url}" dest="${src.zipdir}/src.zip" />
 								<unzip src="${src.zipdir}/src.zip" dest="${src.tmpdir}" />
 								<move todir="${webjar.target}">
-									<fileset dir="${src.rootdir}" includes="dist/**/*.*,LICENSE,README.md"/>
+									<fileset dir="${src.rootdir}" includes="dist/**/*.*,LICENSE,README.md" />
 								</move>
 							</target>
 						</configuration>
@@ -49,4 +49,8 @@
 			</plugin>
 		</plugins>
 	</build>
+
+  <scm>
+    <tag>3.3.7</tag>
+  </scm>
 </project>
