@@ -8,7 +8,7 @@
 	</parent>
 
 	<name>Bootstrap Default Theme</name>
-	<artifactId>fujion-bootstrap</artifactId>
+	<artifactId>webjar-bootstrap</artifactId>
 	<version>3.3.7-SNAPSHOT</version>
 	<description>Default bootstrap theme.</description>
 	
