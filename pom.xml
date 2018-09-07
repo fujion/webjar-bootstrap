@@ -56,4 +56,12 @@
 			</plugin>
 		</plugins>
 	</build>
+	
+	<dependencies>
+		<dependency>
+			<groupId>org.fujion.webjars</groupId>
+			<artifactId>webjar-popperjs</artifactId>
+			<version>1.14.4</version>
+		</dependency>
+	</dependencies>
 </project>
