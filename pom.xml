@@ -9,12 +9,10 @@
 
 	<name>Bootstrap Default Theme</name>
 	<artifactId>webjar-bootstrap</artifactId>
-	<version>4.3.1-1-SNAPSHOT</version>
+	<version>4.4.1-SNAPSHOT</version>
 	<description>Default bootstrap theme.</description>
 	
 	<properties>
-		<src.url>https://github.com/twbs/bootstrap/archive/v${src.version}.zip</src.url>
-		<src.top>bootstrap-${src.version}</src.top>
 		<systemjs>
 			{
 				"paths": {
@@ -31,16 +29,38 @@
 	<build>
 		<plugins>
 			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>npm-install</id>
+						<configuration>
+							<skip>false</skip>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
 				<artifactId>maven-antrun-plugin</artifactId>
 				<executions>
 					<execution>
 						<id>precompile</id>
 						<configuration>
 							<target>
-								<get src="${src.url}" dest="${src.zipdir}/src.zip" />
-								<unzip src="${src.zipdir}/src.zip" dest="${src.tmpdir}" />
-								<move todir="${webjar.target}">
-									<fileset dir="${src.rootdir}">
+								<copy tofile="${src.rootdir}/package.json" file="${basedir}/package-template.json">
+									<filterchain>
+										<expandproperties />
+									</filterchain>
+								</copy>
+							</target>
+						</configuration>
+					</execution>
+					<execution>
+						<id>postcompile</id>
+						<configuration>
+							<target>
+								<copy todir="${webjar.target}">
+									<fileset dir="${src.rootdir}/node_modules/bootstrap">
 										<include name="dist/js/bootstrap.js" />
 										<include name="dist/js/bootstrap.min.js" />
 										<include name="dist/css/bootstrap.css" />
@@ -48,7 +68,7 @@
 										<include name="LICENSE" />
 										<include name="README.md" />
 									</fileset>
-								</move>
+								</copy>
 							</target>
 						</configuration>
 					</execution>
@@ -61,7 +81,7 @@
 		<dependency>
 			<groupId>org.fujion.webjars</groupId>
 			<artifactId>webjar-popperjs</artifactId>
-			<version>1.14.7</version>
+			<version>1.16.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 </project>
