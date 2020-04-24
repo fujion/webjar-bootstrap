@@ -1,0 +1,6 @@
+{
+  "imports": {
+    "bootstrap": "dist/js/bootstrap.js",
+    "bootstrap-css": "dist/css/bootstrap.css"
+  }
+}

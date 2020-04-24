@@ -12,20 +12,6 @@
 	<version>4.4.1-SNAPSHOT</version>
 	<description>Default bootstrap theme.</description>
 	
-	<properties>
-		<systemjs>
-			{
-				"paths": {
-					"bootstrap": "dist/js/bootstrap",
-					"bootstrap-css": "dist/css/bootstrap"
-				},
-					"shim": {
-						"bootstrap": [ "jquery" ]
-				}
-			}			
-		</systemjs>
-	</properties>
-	
 	<build>
 		<plugins>
 			<plugin>
@@ -34,9 +20,6 @@
 				<executions>
 					<execution>
 						<id>npm-install</id>
-						<configuration>
-							<skip>false</skip>
-						</configuration>
 					</execution>
 				</executions>
 			</plugin>
