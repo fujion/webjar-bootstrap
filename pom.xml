@@ -43,14 +43,7 @@
 						<configuration>
 							<target>
 								<copy todir="${webjar.target}">
-									<fileset dir="${src.rootdir}/node_modules/bootstrap">
-										<include name="dist/js/bootstrap.js" />
-										<include name="dist/js/bootstrap.min.js" />
-										<include name="dist/css/bootstrap.css" />
-										<include name="dist/css/bootstrap.min.css" />
-										<include name="LICENSE" />
-										<include name="README.md" />
-									</fileset>
+									<fileset dir="${src.rootdir}/node_modules/bootstrap" includes="dist/,LICENSE,README.md"/>
 								</copy>
 							</target>
 						</configuration>
