@@ -9,7 +9,7 @@
 
 	<name>Bootstrap Default Theme</name>
 	<artifactId>webjar-bootstrap</artifactId>
-	<version>4.6.0</version>
+	<version>4.6.0-1</version>
 	<description>Default bootstrap theme.</description>
 	
 	<build>
@@ -52,12 +52,4 @@
 			</plugin>
 		</plugins>
 	</build>
-	
-	<dependencies>
-		<dependency>
-			<groupId>org.fujion.webjars</groupId>
-			<artifactId>webjar-popperjs</artifactId>
-			<version>1.16.1</version>
-		</dependency>
-	</dependencies>
 </project>

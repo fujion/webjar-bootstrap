@@ -1,6 +1,6 @@
 {
   "paths": {
-    "bootstrap": "dist/js/bootstrap.js",
+    "bootstrap": "dist/js/bootstrap.bundle.js",
     "bootstrap-css": "dist/css/bootstrap.css"
   },
   "shim": {
