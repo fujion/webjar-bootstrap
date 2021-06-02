@@ -9,7 +9,7 @@
 
 	<name>Bootstrap Default Theme</name>
 	<artifactId>webjar-bootstrap</artifactId>
-	<version>4.6.0-10</version>
+	<version>5.0.1</version>
 	<description>Default bootstrap theme.</description>
 	
 	<build>
