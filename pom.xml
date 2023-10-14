@@ -31,6 +31,8 @@
 								<rule>file_exists import-map.json</rule>
 								<rule>file_exists README.md</rule>
 								<rule>file_contains LICENSE "MIT License"</rule>
+								<rule>file_count dist/css 32</rule>
+								<rule>file_count dist/js 12</rule>
 							</rules>
 						</configuration>
 					</execution>
@@ -43,20 +45,11 @@
 						<id>precompile</id>
 						<configuration>
 							<target>
-								<copy tofile="${src.rootdir}/package.json" file="${basedir}/package-template.json">
+								<copy todir="${src.rootdir}">
+									<fileset dir="${basedir}/staging" />
 									<filterchain>
 										<expandproperties />
 									</filterchain>
-								</copy>
-							</target>
-						</configuration>
-					</execution>
-					<execution>
-						<id>postcompile</id>
-						<configuration>
-							<target>
-								<copy todir="${webjar.target}">
-									<fileset dir="${src.rootdir}/node_modules/bootstrap" includes="dist/,LICENSE,README.md"/>
 								</copy>
 							</target>
 						</configuration>
